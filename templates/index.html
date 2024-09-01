@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,20 @@
 
     <!-- Tailwind  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
 
     <!-- Fontawesome  -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-     <style>
-        a{
+    <style>
+        a {
             display: inline-block;
         }
 
-        body{
-            font-family:  "Ubuntu", sans-serif;
+        body {
+            font-family: "Ubuntu", sans-serif;
         }
 
         .swiper-wrapper {
@@ -27,34 +31,56 @@
             -webkit-transition-timing-function: linear !important;
             transition-timing-function: linear !important;
             position: relative;
-            }
-            .swiper-pagination-bullet {
+        }
+
+        .swiper-pagination-bullet {
             background: #4f46e5;
+        }
+
+        .slider img {
+            transition: opacity 1s ease-in-out;
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0%);
             }
 
-            .slider img {
-                transition: opacity 1s ease-in-out;
+            100% {
+                transform: translateX(-100%);
             }
+        }
 
-     </style>
+        .paused {
+            animation-play-state: paused;
+        }
+    </style>
 
-     <script>
-        function nav_hiding(){
+    <script>
+        function nav_hiding() {
             document.getElementById('hide-nav').classList.toggle('hidden')
         }
-    
-        
-     </script>
 
-     <!-- Google font  -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    </script>
+
+    <!-- Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Navbar  -->
     <header class=" sm:rounded-b-xl flex flex-wrap-reverse sm:flex-wrap bg-emerald-400">
-        <div class="sm:rounded-b-xl header-upper hidden sm:flex gap-4 sm:justify-between w-full p-4 px-10 bg-emerald-700 text-white justify-center flex-col sm:flex-row sm:shadow-sm ">
+        <div
+            class="sm:rounded-b-xl header-upper hidden sm:flex gap-4 sm:justify-between w-full p-4 px-10 bg-emerald-700 text-white justify-center flex-col sm:flex-row sm:shadow-sm ">
             <nav class="links w-max mx-auto sm:m-0">
                 <ul class="flex gap-4 flex-wrap">
                     <li><a href="#">News</a></li>
@@ -84,17 +110,20 @@
 
         <div class="header-lower p-4 px-10 flex justify-between items-center w-full sm:rounded-b-xl sm:shadow-md">
             <a href="#" class="logo flex gap-2 items-center">
-                <img src="https://seeklogo.com/images/S/school-education-inspiration-logo-A8AD603C93-seeklogo.com.png" alt="HI" class="h-8">
+                <img src="https://seeklogo.com/images/S/school-education-inspiration-logo-A8AD603C93-seeklogo.com.png"
+                    alt="HI" class="h-8">
                 <span>Model School</span>
             </a>
 
-            <div id="hide-nav" class="bg-emerald-200 z-40 sm:bg-emerald-400 absolute top-14 left-0  w-full sm:w-max sm:static nav-expand sm:flex gap-3 justify-center items-center hidden">
+            <div id="hide-nav"
+                class="bg-emerald-200 z-40 sm:bg-emerald-400 absolute top-14 left-0  w-full sm:w-max sm:static nav-expand sm:flex gap-3 justify-center items-center hidden">
                 <nav class="">
                     <ul class="flex gap-3 px-10 p-4 sm:p-0 flex-col sm:flex-row">
 
                         <div class="group cursor-pointer">
                             <li>Hover Me</li>
-                            <ul class="hidden sm:absolute mt-2 sm:m-0 bg-emerald-400 p-2 px-4 gap-4 group-hover:block sm:border-2 sm:rounded-md">
+                            <ul
+                                class="hidden sm:absolute mt-2 sm:m-0 bg-emerald-400 p-2 px-4 gap-4 group-hover:block sm:border-2 sm:rounded-md">
                                 <li>Item 1</li>
                                 <li>Item 1</li>
                                 <li>Item 1</li>
@@ -102,25 +131,29 @@
 
                         <div class="group cursor-pointer ">
                             <li>Hover Me</li>
-                            <ul class="hidden sm:absolute mt-2 sm:m-0 bg-emerald-400 p-2 px-4 gap-4 group-hover:block sm:border-2 sm:rounded-md">
+                            <ul
+                                class="hidden sm:absolute mt-2 sm:m-0 bg-emerald-400 p-2 px-4 gap-4 group-hover:block sm:border-2 sm:rounded-md">
                                 <li>Item 1</li>
                                 <li>Item 1</li>
                                 <li>Item 1</li>
                         </div>
                     </ul>
                 </nav>
-    
-                <a href="#" class="px-5 p-2 sm:rounded-full bg-emerald-950 text-white font-semibold mx-10 mb-4 sm:m-0 items-center  ">Contact Us</a>
+
+                <a href="#"
+                    class="px-5 p-2 sm:rounded-full bg-emerald-950 text-white font-semibold mx-10 mb-4 sm:m-0 items-center  ">Contact
+                    Us</a>
 
                 <!-- Hide on big screen  -->
 
-                <div class="header-upper sm:hidden flex gap-4 sm:justify-between w-full pb-4 px-10 bg-white-700 text-black justify-center flex-col sm:flex-row">
+                <div
+                    class="header-upper sm:hidden flex gap-4 sm:justify-between w-full pb-4 px-10 bg-white-700 text-black justify-center flex-col sm:flex-row">
                     <nav class="links sm:w-max mx-auto sm:m-0  w-full">
                         <ul class="flex gap-6 flex-wrap bg-emerald-500 justify-center py-4">
                             <li><a href="#">News</a></li>
                             <li><a href="#">Notifications</a></li>
                             <li><a href="#">Events</a></li>
-        
+
                         </ul>
                     </nav>
                     <ul class="contacts flex sm:flex-row gap-3 sm:gap-6 flex-wrap justify-center">
@@ -147,31 +180,31 @@
 
 
     <!-- Notices -->
-     <div id="notice" class="z-50 w-full h-full bg-emerald-100 absolute top-0 bg-opacity-10 p-10 backdrop-blur-md">
+    <!-- <div id="notice" class="z-50 w-full h-full bg-emerald-100 absolute top-0 bg-opacity-10 p-10 backdrop-blur-md">
         
         <i class="text-sm absolute top-5 right-5 fa-solid fa-cross bg-emerald-950 p-4 rounded-full text-white cursor-pointer" onclick="this.parentElement.remove()"></i>
         <img src="https://img.jagranjosh.com/images/2023/July/1772023/notice.jpg" class="h-[90%] py-4 mx-auto" alt="Notice Text">      
-     </div>
-
+     </div> -->
+    <!-- 
      <div id="notice" class="z-50
       w-full h-full bg-emerald-100 absolute top-0 bg-opacity-10 p-10 backdrop-blur-md">
         
         <i class="text-sm absolute top-5 right-5 fa-solid fa-cross bg-emerald-950 p-4 rounded-full text-white cursor-pointer" onclick="this.parentElement.remove()"></i>
         <img src="https://images.examples.com/wp-content/uploads/2017/06/30-day-notice-to-vacate-letter-Template.png" class="h-full py-4 mx-auto" alt="Notice Text">      
-     </div>
+     </div> -->
 
 
     <!-- Home Section  -->
-     <section class=" px-20 p-4 flex gap-4 sm:flex-nowrap flex-wrap-reverse overflow-hidden">
-         <div class="relative left w-full sm:h-100  justify-center items-center sm:items-start flex flex-col gap-4 ">
-            
+    <section class=" px-20 p-4 flex gap-4 sm:flex-nowrap flex-wrap-reverse overflow-hidden">
+        <div class="relative left w-full sm:h-100  justify-center items-center sm:items-start flex flex-col gap-4 ">
+
             <h1 class="flex flex-col gap-[8px] sm:gap-[16px] justify-center items-center sm:items-start">
                 <span class="text-2xl sm:text-4xl">Empowering&nbsp;Growth&nbsp;Through</span>
                 <span class="text-3xl sm:text-5xl font-bold text-emerald-950">Education</span>
             </h1>
-            
+
             <div class="stats flex gap-4 ">
-                <div class="stat bg-white flex flex-col items-center justify-center p-4 rounded-md shadow-md">
+                <div class="stat bg-white flex flex-col items-center justify-center p-4 rounded-md shadow-md ">
                     <span class="font-bold text-emerald-950 text-3xl">100+</span>
                     <p>Years</p>
                 </div>
@@ -185,7 +218,9 @@
                 </div>
             </div>
 
-            <button class="w-max px-6 p-2 bg-emerald-900 hover:bg-emerald-950 transition-all text-xl duration-200 text-white">See A Video</button>
+            <button
+                class="w-max px-6 p-2 bg-emerald-900 hover:animate-none hover:bg-emerald-950 transition-all text-xl duration-200 text-white">See
+                A Video</button>
 
         </div>
 
@@ -197,35 +232,58 @@
                     <div class="overflow-hidden relative h-[360px]  rounded-lg ">
                         <!-- Item 1 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/School-education-learning-1750587-h.jpg/1200px-School-education-learning-1750587-h.jpg" class="block absolute top-1/2  h-full object-cover left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/School-education-learning-1750587-h.jpg/1200px-School-education-learning-1750587-h.jpg"
+                                class="block absolute top-1/2  h-full object-cover left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                alt="...">
                         </div>
                         <!-- Item 2 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="https://www.collinsdictionary.com/images/full/school_309241295.jpg" class="block absolute top-1/2 left-1/2 w-full h-full  object-cover -translate-x-1/2 -translate-y-1/2" alt="...">
+                            <img src="https://www.collinsdictionary.com/images/full/school_309241295.jpg"
+                                class="block absolute top-1/2 left-1/2 w-full h-full  object-cover -translate-x-1/2 -translate-y-1/2"
+                                alt="...">
                         </div>
                         <!-- Item 3 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="https://raghavfoundation.org.in/wp-content/uploads/2023/05/school-image.jpg" class="block absolute top-1/2 left-1/2 w-full h-full  object-cover -translate-x-1/2 -translate-y-1/2" alt="...">
+                            <img src="https://raghavfoundation.org.in/wp-content/uploads/2023/05/school-image.jpg"
+                                class="block absolute top-1/2 left-1/2 w-full h-full  object-cover -translate-x-1/2 -translate-y-1/2"
+                                alt="...">
                         </div>
                     </div>
 
-                    
+
                     <!-- Slider indicators -->
                     <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
+                            data-carousel-slide-to="0"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                            data-carousel-slide-to="1"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                            data-carousel-slide-to="2"></button>
                     </div>
                     <!-- Slider controls -->
-                    <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <button type="button"
+                        class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7"></path>
+                            </svg>
                             <span class="hidden">Previous</span>
                         </span>
                     </button>
-                    <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <button type="button"
+                        class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
                             <span class="hidden">Next</span>
                         </span>
                     </button>
@@ -233,11 +291,466 @@
                 <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
             </div>
         </div>
-     </section>
-        
+    </section>
+
+
+    <hr class="sm:hidden">
     <!-- Partners -->
-     <section class="flex">
+    <section class="flex sm:flex-row flex-col mx-10 sm:mx-20 sm:rounded-xl sm:overflow-hidden">
+        <div
+            class="title sm:bg-emerald-950 px-4 flex flex-col justify-center items-center sm:text-white w-full sm:w-max ">
+            <p class="w-full sm:w-max font-black px-6 text-3xl text-center p-6">Our Partners</p>
+        </div>
+        <div class="logos sm:px-0 w-full">
+            <div
+                class="logos flex-wrap flex gap-4 sm:gap-10 p-4 w-full justify-center sm:justify-left  bg-gray-100 rounded-lg sm:rounded-none">
+                <img src="https://app.mysecondteacher.com.np/98640e2d9995df24.png"
+                    class=" h-20  bg-white rounded-md px-4 p-2" alt="">
+                <img src="https://i.pinimg.com/736x/98/e5/a4/98e5a4811e32177795897d60231a016f.jpg"
+                    class=" h-20  bg-white rounded-md px-4 p-2" alt="">
+                <img src="https://app.mysecondteacher.com.np/98640e2d9995df24.png"
+                    class="h-20  bg-white rounded-md px-4 p-2" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Message -->
+    <section class="mt-5 p-5 px-10  sm:px-20 flex flex-col sm:flex-row  bg-gray-50">
+        <div class="left">
+            <img src="https://app.teachaway.com/sites/default/files/collections/qualities-in-a-principal-teachers-like.jpg"
+                alt="principal" class="rounded-md shadow-md object-cover w-max sm:w-max sm:min-h-96 h-96 sm:h-full ">
+        </div>
+        <div class="right sm:pb-2">
+            <h1 class="my-5 sm:my-0 text-3xl sm:text-3xl font-black sm:p-4 sm:px-10">Principals Message</h1>
+            <p class=" sm:px-10 ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti quaerat autem non distinctio,
+                explicabo culpa saepe cumque, beatae quibusdam modi totam omnis qui libero possimus eius? Doloremque,
+                expedita hic!
+                <br>
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dolores recusandae voluptas adipisci
+                iure, soluta voluptate earum cumque?
+                <br>
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolores provident illo unde voluptates
+                tempore, tenetur obcaecati, laboriosam autem molestiae atque sint libero.
+                <br>
+                Regards , <br>Alex Ambrose Ghale
+            </p>
+            <a class="sm:mx-10 px-6 py-3 mt-3 bg-emerald-950 text-white " href="">Know More</a>
+        </div>
+    </section>
+
+    <!-- Features  -->
+    <section class="px-10  sm:px-20 p-5">
+        <h1 class="font-black text-3xl text-center">Why Us</h1>
+        <p class="text-center sm:px-40 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
+            delectus molestias ullam dolore reiciendis aliquid?</p>
+        <div class="features py-4 flex gap-3 justify-around flex-row flex-wrap">
+
+            <div
+                class="feature shadow-emerald-50 shadow-md px-6 border-[1px] rounded-lg p-4 max-w-[350px] min-w-[280px] flex flex-col items-center gap-2">
+                <div class="icon w-[80px] h-[80px] rounded-full overflow-hidden">
+                    <img src="https://images.trophydepot.com/QC/images/products/KN_Academic_Exellence_SPRD-1016.jpg">
+                </div>
+                <h3 class="text-center text-lg font-semibold">Academic Excellence</h3>
+                <p class="text-center leading-6">A strong curriculum with well-qualified teachers, advanced placement
+                    (AP) courses, and a focus on student success.</p>
+            </div>
+
+            <div
+                class="feature shadow-emerald-50 flex-grow shadow-md px-6 border-[1px] rounded-lg p-4 max-w-[350px] min-w-[280px] flex flex-col items-center gap-2">
+                <div class="icon w-[80px] h-[80px] rounded-full overflow-hidden">
+                    <img src="https://images.trophydepot.com/QC/images/products/KN_Academic_Exellence_SPRD-1016.jpg">
+                </div>
+                <h3 class="text-center text-lg font-semibold">Academic Excellence</h3>
+                <p class="text-center leading-6">A strong curriculum with well-qualified teachers, advanced placement
+                    (AP) courses, and a focus on student success.</p>
+            </div>
+
+            <div
+                class="feature shadow-emerald-50 flex-grow shadow-md px-6 border-[1px] rounded-lg p-4 max-w-[350px] min-w-[280px] flex flex-col items-center gap-2">
+                <div class="icon w-[80px] h-[80px] rounded-full overflow-hidden">
+                    <img src="https://images.trophydepot.com/QC/images/products/KN_Academic_Exellence_SPRD-1016.jpg">
+                </div>
+                <h3 class="text-center text-lg font-semibold">Academic Excellence</h3>
+                <p class="text-center leading-6">A strong curriculum with well-qualified teachers, advanced placement
+                    (AP) courses, and a focus on student success.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Events  -->
+    <section id="events" class="px-10 sm:px-20 p-4 bg-gray-100">
+        <h1 class="font-black text-3xl text-center py-4 pb-6">Events and News</h1>
+        <div class="events flex flex-row gap-4 flex-wrap justify-evenly">
+
+            <article class="overflow-hidden rounded-lg border border-gray-100 bg-white max-w-[350px]">
+                <img alt=""
+                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    class="h-56 w-full object-cover" />
+
+                <div class="p-4 sm:p-6">
+                    <p class="text-[12px] text-gray-600 flex flex-row justify-left items-center gap-1">
+                        <i class="fa-solid fa-calendar"></i>                        <span>21st February</span>
+                    </p>
+                    <a href="#">
+                        <h3 class="text-lg font-medium text-gray-900">
+                            Teacher Student Mela
+                        </h3>
+                    </a>
+
+                    <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
+                        pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem,
+                        mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque
+                        dignissimos. Molestias explicabo corporis voluptatem?
+                    </p>
+
+                    <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-900">
+                        Find out more
+
+                        <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                            &rarr;
+                        </span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="overflow-hidden rounded-lg border border-gray-100 bg-white max-w-[350px]">
+                <img alt=""
+                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    class="h-56 w-full object-cover" />
+
+                <div class="p-4 sm:p-6">
+                    <p class="text-[12px] text-gray-600 flex flex-row justify-left items-center gap-1">
+                        <i class="fa-solid fa-calendar"></i>                        <span>21st February</span>
+                    </p>
+                    <a href="#">
+                        <h3 class="text-lg font-medium text-gray-900">
+                            Teacher Student Mela
+                        </h3>
+                    </a>
+
+                    <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
+                        pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem,
+                        mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque
+                        dignissimos. Molestias explicabo corporis voluptatem?
+                    </p>
+
+                    <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-900">
+                        Find out more
+
+                        <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                            &rarr;
+                        </span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="overflow-hidden rounded-lg border border-gray-100 bg-white max-w-[350px]">
+                <img alt=""
+                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    class="h-56 w-full object-cover" />
+
+                <div class="p-4 sm:p-6">
+                    <p class="text-[12px] text-gray-600 flex flex-row justify-left items-center gap-1">
+                        <i class="fa-solid fa-calendar"></i>                        <span>21st February</span>
+                    </p>
+                    <a href="#">
+                        <h3 class="text-lg font-medium text-gray-900">
+                            Teacher Student Mela
+                        </h3>
+                    </a>
+
+                    <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
+                        pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem,
+                        mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque
+                        dignissimos. Molestias explicabo corporis voluptatem?
+                    </p>
+
+                    <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-900">
+                        Find out more
+
+                        <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                            &rarr;
+                        </span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+        <div class="button flex items-center">
+
+            <a href="#" class="px-6 py-4 font-semibold text-md bg-emerald-950 mt-4 transition-all duration-200 hover:rounded-md hover:bg-emerald-600 mx-auto text-white ">Discover More</a>
+        </div>
+    </section>
+
+    <!-- News Section  -->
+     <section class="px-20 sm:px-10 p-8">
+        <h1 class="font-black text-3xl text-center py-4 pb-6">Gallery</h1>
+
+        <div class="gallery flex gap-4 flex-wrap w-full justify-evenly">
+            <a href="" class="relative group">
+                <img src="https://via.placeholder.com/400" alt="Gallery Item 1" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">Item 1</p>
+                </div>
+            </a>
+            <!-- Gallery Item 2 -->
+            <a href="" class="relative group">
+                <img src="https://via.placeholder.com/400" alt="Gallery Item 2" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">Item 2</p>
+                </div>
+            </a>
+            <!-- Gallery Item 3 -->
+            <a href="" class="relative group">
+                <img src="https://via.placeholder.com/400" alt="Gallery Item 3" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">Item 3</p>
+                </div>
+            </a>
+            <!-- Gallery Item 4 -->
+            <a href="" class="relative group">
+                <img src="https://via.placeholder.com/400" alt="Gallery Item 4" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">Item 4</p>
+                </div>
+            </a>
+        </div>
+        <div class="button flex items-center">
+            <a href="#" class="px-6 py-4 font-semibold text-md bg-emerald-950 mt-4 transition-all duration-200 hover:rounded-md hover:bg-emerald-600 mx-auto text-white ">See More</a>
+        </div>
      </section>
-     
+
+
+    <!-- Courses Offered Section  -->
+    <section class="px-20 sm:px-10 p-8 bg-gray-100">
+        <h1 class="font-black text-3xl text-center py-4 pb-6">Courses Offered</h1>
+
+        <div class="flex gap-2 justify-evenly">
+            <a href="#" class="group relative block max-w-[300px] bg-black h-[400px]">
+                <img alt="" src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80" class="absolute inset-0 max-h-[400px] h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
+              
+                <div class="relative p-4 sm:p-6 lg:p-8">
+                  <p class="text-sm font-medium uppercase tracking-widest text-emerald-500">Plus Two</p>
+              
+                  <p class="text-xl font-bold text-white sm:text-2xl">Science</p>
+              
+                  <div class="">
+                    <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                      <p class="text-sm text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            <a href="#" class="group relative block max-w-[300px] bg-black h-[400px]">
+                <img alt="" src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80" class="absolute inset-0 max-h-[400px] h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
+              
+                <div class="relative p-4 sm:p-6 lg:p-8">
+                  <p class="text-sm font-medium uppercase tracking-widest text-emerald-500">Bachelors</p>
+              
+                  <p class="text-xl font-bold text-white sm:text-2xl">Computing</p>
+              
+                  <div class="">
+                    <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                      <p class="text-sm text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            <a href="#" class="group relative block max-w-[300px] bg-black h-[400px]">
+                <img alt="" src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80" class="absolute inset-0 max-h-[400px] h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
+              
+                <div class="relative p-4 sm:p-6 lg:p-8">
+                  <p class="text-sm font-medium uppercase tracking-widest text-emerald-500">Bachelors </p>
+              
+                  <p class="text-xl font-bold text-white sm:text-2xl">Business</p>
+              
+                  <div class="">
+                    <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                      <p class="text-sm text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+        </div>
+        <div class="button flex items-center">
+            <a href="#" class="px-6 py-4 font-semibold text-md bg-emerald-950 mt-4 transition-all duration-200 hover:rounded-md hover:bg-emerald-600 mx-auto text-white ">Inquire Now</a>
+        </div>
+     </section>
+
+    <!-- Contact Form Section -->
+<section class="bg-white px-20 py-8 sm:px-10 ">
+    <div class="container mx-auto">
+      <h2 class="mb-6 text-center text-3xl font-black">Contact Us</h2>
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <!-- Contact Information -->
+        <div class="rounded-lg bg-gray-50 p-4 text-gray-800">
+          <div class="mb-6">
+            <h3 class="mb-2 text-lg font-semibold text-gray-800">Get in Touch</h3>
+            <p class="mb-4 text-sm text-gray-700">Feel free to contact us through the form or using the contact details below.</p>
+            <ul class="space-y-4">
+              <!-- Phone -->
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt mr-3"></i>
+                <span class="text-gray-700">+123 456 7890</span>
+              </li>
+              <!-- Email -->
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 "></i>
+                <span class="text-gray-700">info@school.edu</span>
+              </li>
+              <!-- Address -->
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-3 "></i>
+                <span class="text-gray-700">123 School St, Kathmandu</span>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Map -->
+          <div>
+            <h3 class="mb-2 text-lg font-semibold ">Our Location</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9309752658076!2d85.31286301456116!3d27.717245473856436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b5479c2f5d5%3A0x8905d9c8e99f5b89!2s123%20School%20St%2C%20Kathmandu!5e0!3m2!1sen!2snp!4v1639534255076!5m2!1sen!2snp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-md"></iframe>
+          </div>
+        </div>
+  
+        <!-- Contact Form -->
+        <div>
+          <form action="#" method="POST" class="space-y-6">
+            <!-- Name Field -->
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border border-gray-300 p-3 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" placeholder="Your Name" />
+            </div>
+  
+            <!-- Email Field -->
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border border-gray-300 p-3 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" placeholder="Your Email" />
+            </div>
+  
+            <!-- Message Field -->
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border border-gray-300 p-3 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 sm:text-sm" placeholder="Your Message"></textarea>
+            </div>
+  
+            <!-- Submit Button -->
+            <div>
+              <button type="submit" class="w-full rounded-md bg-emerald-900 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-500">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Footer -->
+  <footer class="bg-emerald-900 text-white py-8 mt-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- About Section -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">About Us</h3>
+          <p class="text-sm">
+            Our school is dedicated to providing high-quality education and fostering the development of every student.
+          </p>
+        </div>
+  
+        <!-- Quick Links Section -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul>
+            <li class="mb-2">
+              <a href="#" class="text-sm hover:text-emerald-300 transition-colors">Home</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-sm hover:text-emerald-300 transition-colors">Admissions</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-sm hover:text-emerald-300 transition-colors">Programs</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-sm hover:text-emerald-300 transition-colors">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Contact Section -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <ul class="text-sm mb-4">
+            <li class="mb-2 flex items-center">
+              <i class="fas fa-phone-alt mr-2 text-emerald-300"></i> +123 456 7890
+            </li>
+            <li class="mb-2 flex items-center">
+              <i class="fas fa-envelope mr-2 text-emerald-300"></i> info@school.edu
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-map-marker-alt mr-2 text-emerald-300"></i> 123 School St, Kathmandu
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Newsletter Section -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+          <p class="text-sm mb-4">
+            Subscribe to our newsletter to stay updated on school news and events.
+          </p>
+          <form>
+            <input
+              type="email"
+              class="w-full p-2 mb-2 text-black rounded focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              placeholder="Enter your email"
+            />
+            <button
+              type="submit"
+              class="w-full p-2 bg-emerald-600 hover:bg-emerald-500 transition-colors rounded text-white"
+            >
+              Subscribe
+            </button>
+            <button
+              class="w-full mt-4 p-2 bg-emerald-600 hover:bg-emerald-500 transition-colors rounded text-white"
+            >
+              Inquire Now
+            </button>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Social Media Section -->
+      <div class="mt-8 flex justify-center space-x-4">
+        <a href="#" class="text-emerald-300 hover:text-white transition-colors">
+          <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="#" class="text-emerald-300 hover:text-white transition-colors">
+          <i class="fab fa-twitter text-xl"></i>
+        </a>
+        <a href="#" class="text-emerald-300 hover:text-white transition-colors">
+          <i class="fab fa-instagram text-xl"></i>
+        </a>
+        <a href="#" class="text-emerald-300 hover:text-white transition-colors">
+          <i class="fab fa-linkedin-in text-xl"></i>
+        </a>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="mt-8 border-t border-emerald-600 pt-4 text-center">
+        <p class="text-sm">
+          &copy; 2024 School Name. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  
 </body>
+
 </html>
