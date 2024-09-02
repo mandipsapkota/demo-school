@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+
+    <!-- Fontawesome and js  -->
+      <!-- Tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Js  -->
+</head>
+<body>
+    <section id="header" class = "px-10 sm:px-20 p-8 bg-emerald-900">
+        <h1 class="text-white font-black text-3xl">Notifications</h1>
+    </section>
+    <section id="notices" class="px-10 sm:px-20  mt-2">
+        <div class="notice p-8 rounded-lg shadow-md">
+            <div class="date">
+                <i class="fa-solid fa-calender"></i>
+                <span>21st August</span>
+            </div>
+            <h3>Notice title</h3>
+            <p>Notice detail</p>
+            <button onclick="this.parentElement.querySelector('.notice-full').classList.remove('hidden')">View Full Notice</button>
+            <div class="notice-full fixed w-full h-full bg-black p-4 top-0 left-0 hidden">
+                <button onclick="this.parentElement.classList.add('hidden')" class="bg-white">Close</button>
+            </div>
+        </div>
+        <div class="notice p-8 rounded-lg shadow-md">
+            <div class="date">
+                <i class="fa-solid fa-calender"></i>
+                <span>21st August</span>
+            </div>
+            <h3>Notice title</h3>
+            <p>Notice detail</p>
+            <button onclick="this.parentElement.querySelector('.notice-full').classList.remove('hidden')">View Full Notice</button>
+            <div class="notice-full fixed w-full h-full bg-green-400 p-4 top-0 left-0 hidden">
+                <button onclick="this.parentElement.classList.add('hidden')" class="bg-white">Close</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

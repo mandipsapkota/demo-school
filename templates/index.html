@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample school website</title>
 
+    
     <!-- Tailwind  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
@@ -15,7 +16,12 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
         a {
             display: inline-block;
         }
@@ -76,7 +82,7 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body >
     <!-- Navbar  -->
     <header class=" sm:rounded-b-xl flex flex-wrap-reverse sm:flex-wrap bg-emerald-400">
         <div
@@ -84,7 +90,7 @@
             <nav class="links w-max mx-auto sm:m-0">
                 <ul class="flex gap-4 flex-wrap">
                     <li><a href="#">News</a></li>
-                    <li><a href="#">Notifications</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
                     <li><a href="#">Events</a></li>
 
                 </ul>
@@ -120,23 +126,39 @@
                 <nav class="">
                     <ul class="flex gap-3 px-10 p-4 sm:p-0 flex-col sm:flex-row">
 
-                        <div class="group cursor-pointer">
-                            <li>Hover Me</li>
-                            <ul
-                                class="hidden sm:absolute mt-2 sm:m-0 bg-emerald-400 p-2 px-4 gap-4 group-hover:block sm:border-2 sm:rounded-md">
-                                <li>Item 1</li>
-                                <li>Item 1</li>
-                                <li>Item 1</li>
+                        <div class="group cursor-pointer transition-all duration-200">
+                            <li><a>About Us</a></li>
+                            <!-- <ul
+                                class="hidden sm:absolute mt-2 sm:m-0 bg-emerald-400 p-2 px-4 gap-4 group-hover:block translate-y-10 group-hover:translate-y-0 transition-all  duration-200 sm:border-2 sm:rounded-md">
+                                <li>Our Team</li>
+                                <li>Our Mission</li>
+                                <li>Activities</li>
+                                <li>Achievements</li>
+                            </ul> -->
                         </div>
 
                         <div class="group cursor-pointer ">
-                            <li>Hover Me</li>
-                            <ul
+                            <li><a href="">Gallery</a></li>
+                            <!-- <ul
                                 class="hidden sm:absolute mt-2 sm:m-0 bg-emerald-400 p-2 px-4 gap-4 group-hover:block sm:border-2 sm:rounded-md">
-                                <li>Item 1</li>
-                                <li>Item 1</li>
-                                <li>Item 1</li>
+                                <li>Photos</li>
+                                <li>Videos</li>
+                            </ul> -->
                         </div>
+
+                        <div class="group cursor-pointer ">
+                            <li><a href="">Our Courses</a></li>
+                            <!-- <ul
+                                class="hidden sm:absolute mt-2 sm:m-0 bg-emerald-400 p-2 px-4 gap-4 group-hover:block sm:border-2 sm:rounded-md">
+                                <li>Plus Two (Science)</li>
+                                <li>Plus Two (Management)</li>
+                                <li>Bachelors Business</li>
+                                <li>Bachelors Computing</li>
+                        </ul> -->
+                        </div>
+
+
+
                     </ul>
                 </nav>
 
@@ -179,26 +201,27 @@
     </header>
 
 
+    
     <!-- Notices -->
     <!-- <div id="notice" class="z-50 w-full h-full bg-emerald-100 absolute top-0 bg-opacity-10 p-10 backdrop-blur-md">
         
         <i class="text-sm absolute top-5 right-5 fa-solid fa-cross bg-emerald-950 p-4 rounded-full text-white cursor-pointer" onclick="this.parentElement.remove()"></i>
         <img src="https://img.jagranjosh.com/images/2023/July/1772023/notice.jpg" class="h-[90%] py-4 mx-auto" alt="Notice Text">      
-     </div> -->
+     </div>  -->
     <!-- 
      <div id="notice" class="z-50
       w-full h-full bg-emerald-100 absolute top-0 bg-opacity-10 p-10 backdrop-blur-md">
         
         <i class="text-sm absolute top-5 right-5 fa-solid fa-cross bg-emerald-950 p-4 rounded-full text-white cursor-pointer" onclick="this.parentElement.remove()"></i>
         <img src="https://images.examples.com/wp-content/uploads/2017/06/30-day-notice-to-vacate-letter-Template.png" class="h-full py-4 mx-auto" alt="Notice Text">      
-     </div> -->
+     </div>
 
-
+    -->
     <!-- Home Section  -->
-    <section class=" px-20 p-4 flex gap-4 sm:flex-nowrap flex-wrap-reverse overflow-hidden">
+    <section id="home" class="bg-white px-20 p-4 flex gap-4 sm:flex-nowrap flex-wrap-reverse overflow-hidden">
         <div class="relative left w-full sm:h-100  justify-center items-center sm:items-start flex flex-col gap-4 ">
 
-            <h1 class="flex flex-col gap-[8px] sm:gap-[16px] justify-center items-center sm:items-start">
+            <h1 id="home-title" class="flex flex-col gap-[8px] sm:gap-[16px] justify-center items-center sm:items-start">
                 <span class="text-2xl sm:text-4xl">Empowering&nbsp;Growth&nbsp;Through</span>
                 <span class="text-3xl sm:text-5xl font-bold text-emerald-950">Education</span>
             </h1>
@@ -296,7 +319,7 @@
 
     <hr class="sm:hidden">
     <!-- Partners -->
-    <section class="flex sm:flex-row flex-col mx-10 sm:mx-20 sm:rounded-xl sm:overflow-hidden">
+    <section class="bg-white flex sm:flex-row flex-col px-10 sm:px-20 sm:overflow-hidden">
         <div
             class="title sm:bg-emerald-950 px-4 flex flex-col justify-center items-center sm:text-white w-full sm:w-max ">
             <p class="w-full sm:w-max font-black px-6 text-3xl text-center p-6">Our Partners</p>
@@ -321,7 +344,7 @@
                 alt="principal" class="rounded-md shadow-md object-cover w-max sm:w-max sm:min-h-96 h-96 sm:h-full ">
         </div>
         <div class="right sm:pb-2">
-            <h1 class="my-5 sm:my-0 text-3xl sm:text-3xl font-black sm:p-4 sm:px-10">Principals Message</h1>
+            <h1 id="msg-title" class="my-5 sm:my-0 text-3xl sm:text-3xl font-black sm:p-4 sm:px-10">Principals Message</h1>
             <p class=" sm:px-10 ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti quaerat autem non distinctio,
                 explicabo culpa saepe cumque, beatae quibusdam modi totam omnis qui libero possimus eius? Doloremque,
@@ -342,7 +365,7 @@
     </section>
 
     <!-- Features  -->
-    <section class="px-10  sm:px-20 p-5">
+    <section class="bg-white px-10  sm:px-20 p-5">
         <h1 class="font-black text-3xl text-center">Why Us</h1>
         <p class="text-center sm:px-40 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
             delectus molestias ullam dolore reiciendis aliquid?</p>
@@ -490,7 +513,7 @@
     </section>
 
     <!-- News Section  -->
-     <section class="px-20 sm:px-10 p-8">
+     <section class="bg-white px-20 sm:px-10 p-8">
         <h1 class="font-black text-3xl text-center py-4 pb-6">Gallery</h1>
 
         <div class="gallery flex gap-4 flex-wrap w-full justify-evenly">
@@ -526,6 +549,7 @@
             <a href="#" class="px-6 py-4 font-semibold text-md bg-emerald-950 mt-4 transition-all duration-200 hover:rounded-md hover:bg-emerald-600 mx-auto text-white ">See More</a>
         </div>
      </section>
+
 
 
     <!-- Courses Offered Section  -->
@@ -751,6 +775,12 @@
     </div>
   </footer>
   
+  <!-- Goto Top  -->
+   <a href="#" class="fixed bottom-5 right-5  bg-emerald-700 hover:bg-emerald-500 transition-200 transition-all p-4 rounded-full">
+    <i class="fa-solid fa-arrow-up text-white"></i>
+   </a>
+
+  <!-- Gsap  -->
 </body>
 
 </html>
